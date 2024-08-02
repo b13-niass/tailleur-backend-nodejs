@@ -1,0 +1,46 @@
+POST http://localhost:5000/api/v1/login
+Content-Type: application/json
+
+{
+"email": "john.doe@example.com",
+"password": "passer"
+}
+
+################################
+
+GET http://localhost:5000/api/v1/user/profile
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibm9tIjoiRG9lIiwicHJlbm9tIjoiSm9obiIsImltYWdlIjoiaW1hZ2UxLmpwZyIsImVtYWlsIjoiam9obi5kb2VAZXhhbXBsZS5jb20iLCJyb2xlIjoidGFpbGxldXIiLCJpYXQiOjE3MjI1NzA4MDUsImV4cCI6MTcyMjU3ODAwNX0.t6fu7d6zRghBJjtxihlnoe-RVQ-jKuIKXBjlnPY2C48
+
+################################
+
+GET http://localhost:5000/api/v1/tailleur/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibm9tIjoiRG9lIiwicHJlbm9tIjoiSm9obiIsImltYWdlIjoiaW1hZ2UxLmpwZyIsImVtYWlsIjoiam9obi5kb2VAZXhhbXBsZS5jb20iLCJyb2xlIjoidGFpbGxldXIiLCJpYXQiOjE3MjI1NzA4MDUsImV4cCI6MTcyMjU3ODAwNX0.t6fu7d6zRghBJjtxihlnoe-RVQ-jKuIKXBjlnPY2C48
+
+###############################
+
+POST http://localhost:5000/api/v1/tailleur/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibm9tIjoiRG9lIiwicHJlbm9tIjoiSm9obiIsImltYWdlIjoiaW1hZ2UxLmpwZyIsImVtYWlsIjoiam9obi5kb2VAZXhhbXBsZS5jb20iLCJyb2xlIjoidGFpbGxldXIiLCJpYXQiOjE3MjI1NzA4MDUsImV4cCI6MTcyMjU3ODAwNX0.t6fu7d6zRghBJjtxihlnoe-RVQ-jKuIKXBjlnPY2C48
+Content-Type: application/json
+
+{
+  "id": 4,
+  "image": "post_image4.jpg",
+  "description": "A beautiful fabric post",
+  "nbrVue": 100,
+  "nbrPartage": 10,
+  "etat": "ACTIVER",
+  "utilisateurId": 1
+}
+
+###############################
+POST http://localhost:5000/api/v1/register
+Content-Type: application/json
+
+{
+  "nom": "John Doe",
+  "prenom": "John",
+  "image": "image1.jpg",
+  "email": "teste.doe@example.com",
+   "password": "passer",
+   "role": "TAILLEUR"
+}
